@@ -5,22 +5,23 @@ categories: [TIL, 데이터베이스]
 tags: [security, database]
 ---
 
-## 오늘 배운 내용
+# 오늘 배운 내용
 
 * 파이썬을 설치했다. 
 * 파이썬으로 패키지를 설치하고, 연동하는 방법을 배웠다. 
 
 ```python
+# MySQL 연동 
 import mysql.connector
 
 # 1. DB 연결
+
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
     password="본인비밀번호",
     database="filter_db2"
 )
-
 cursor = conn.cursor()
 
 # 2. 데이터 조회
@@ -34,3 +35,6 @@ for row in rows:
 # 4. 종료
 cursor.close()
 conn.close()
+```
+ ### 내가 오늘 작업간 느낀점. 
+-  데이터관리도 Python을 활용하여 편리하게 관리해야한다는걸 알았다. 
