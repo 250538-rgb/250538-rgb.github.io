@@ -36,5 +36,6 @@ for row in rows:
 cursor.close()
 conn.close()
 ```
+
 ### 내가 오늘 작업간 느낀점. 
 -  데이터관리도 Python을 활용하여 편리하게 관리해야한다는걸 알았다. 
