@@ -1,15 +1,36 @@
 ---
-title: "오늘의 배움: Jekyll 블로그 구축"
-date: 2026-03-16 09:00:00 +0900
-categories: [TIL, Blog]
-tags: [jekyll, github-pages]
+title: "오늘의 배움: 데이터베이스와 python 연동하기"
+date: 2026-03-17 09:00:00 +0900
+categories: [TIL, 데이터베이스]
+tags: [security, database]
 ---
 
 ## 오늘 배운 내용
 
-* Windows 11에서 Ruby 환경을 설정했다.
-* GitHub Pages와 Jekyll을 연동했다.
+* 파이썬을 설치했다. 
+* 파이썬으로 패키지를 설치하고, 연동하는 방법을 배웠다. 
 
-<br>
+```python
+import mysql.connector
 
-![alt text](../assets/img/posts/2026-03-16-my-first-post/2026-03-16-10-37-30.png)
+# 1. DB 연결
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="본인비밀번호",
+    database="filter_db2"
+)
+
+cursor = conn.cursor()
+
+# 2. 데이터 조회
+cursor.execute("SELECT * FROM students2 WHERE grade = 2")
+rows = cursor.fetchall()
+
+# 3. 결과 출력
+for row in rows:
+    print(row)
+
+# 4. 종료
+cursor.close()
+conn.close()
