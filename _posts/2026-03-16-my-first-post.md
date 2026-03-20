@@ -15,12 +15,11 @@ tags: [security, database]
 import mysql.connector
 
 # 1. DB 연결
-
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
     password="본인비밀번호",
-    database="filter_db2"
+    database="MyDataBase"
 )
 cursor = conn.cursor()
 
@@ -38,4 +37,4 @@ conn.close()
 ```
 
 ### 내가 오늘 작업간 느낀점. 
--  데이터관리도 Python을 활용하여 편리하게 관리해야한다는걸 알았다. 
+-  데이터관리도 Python을 활용하여 효율적으로 관리해야한다는걸 알게 되었다. 
